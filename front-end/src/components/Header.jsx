@@ -1,12 +1,9 @@
 export default function Header() {
     return (
-        <header className="bg-white py-4">
-            <nav className="container mx-auto flex items-center justify-between">
+        <header className="py-4">
+            <nav className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                    <img
-                        src="/Logo.svg"
-                        alt="Logo"
-                    />
+                    <img src="/Logo.svg" alt="Logo" />
                 </div>
                 <ul className="flex items-center space-x-8 text-lg text-black">
                     <li>
@@ -22,7 +19,7 @@ export default function Header() {
                     <li>
                         <a
                             href="/profile"
-                            className="bg-lime-400 text-black px-4 py-2 rounded-md hover:bg-lime-500 transition"
+                            className="bg-lime-300 text-black px-4 py-2 rounded-md hover:bg-lime-500 transition"
                         >
                             Profile
                         </a>
