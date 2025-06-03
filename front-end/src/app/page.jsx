@@ -1,3 +1,4 @@
+import SwiperComponent from "@/components/SwiperComponent";
 export default function Home() {
     function ServiceCard({
         title,
@@ -71,7 +72,7 @@ export default function Home() {
                             textColor="text-gray"
                             imgSrc="/services-calculator.png"
                             bgColor="bg-gray-100"
-                            bgTitlecolor={"bg-lime-300"}    
+                            bgTitlecolor={"bg-lime-300"}
                         />
                         <ServiceCard
                             title="Personalized Workout Plans"
@@ -103,6 +104,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <SwiperComponent />
         </>
     );
 }

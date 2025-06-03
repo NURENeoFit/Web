@@ -1,36 +1,38 @@
+import Link from 'next/link';
+
 export default function Header() {
     return (
-        <header className="py-4">
-            <nav className="flex items-center justify-between">
+        <header className="py-4 ">
+            <nav className="flex items-center justify-between container mx-auto max-w-7xl">
                 <div className="flex items-center space-x-2">
                     <img src="/Logo.svg" alt="Logo" />
                 </div>
                 <ul className="flex items-center space-x-8 text-lg text-black">
                     <li>
-                        <a href="/" className="hover:underline">
+                        <Link href="/" className="hover:underline">
                             About us
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/pricing" className="hover:underline">
+                        <Link href="/pricing" className="hover:underline">
                             Pricing
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
+                        <Link
                             href="/profile"
                             className="bg-lime-300 text-black px-4 py-2 rounded-md hover:bg-lime-500 transition"
                         >
                             Profile
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
+                        <Link
                             href="/signup"
                             className="border border-lime-400 text-black px-4 py-2 rounded-md hover:bg-lime-100 transition"
                         >
                             Sign up
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${spaceSans.className} antialiased mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+                className={`${spaceSans.className} antialiased `}
             >
                 <Header />
-                <div className="page">{children}</div>
+                <div className="page container mx-auto max-w-7xl">{children}</div>
                 <Footer />
             </body>
         </html>
