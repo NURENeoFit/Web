@@ -1,31 +1,8 @@
 import SwiperComponent from "@/components/SwiperComponent";
+import ServiceCard from "@/components/ServiceComponent";
+import MapWrapper from "@/components/Map/MapWrapper";
+import Image from "next/image";
 export default function Home() {
-    function ServiceCard({
-        title,
-        description,
-        imgSrc,
-        bgColor,
-        textColor,
-        titleColor,
-        bgTitlecolor,
-    }) {
-        return (
-            <div
-                className={`${bgColor} rounded-3xl py-16 px-8 flex items-center justify-between border border-b-4 border-gray-700`}
-            >
-                <div className="max-w-72">
-                    <h3
-                        className={`text-3xl mb-6 inline-block px-2 py-1 rounded-xl ${titleColor} ${bgTitlecolor}`}
-                    >
-                        {title}
-                    </h3>
-                    <p className={`${textColor}`}>{description}</p>
-                </div>
-                <img src={imgSrc} alt={`${title} Icon`} className="w-50 h-40" />
-            </div>
-        );
-    }
-
     return (
         <>
             <main className="flex flex-col md:flex-row items-center justify-between gap-8 pt-16 mb-32">
@@ -53,7 +30,7 @@ export default function Home() {
             </main>
 
             <section className="mb-32">
-                <div className="max-w-7xl mx-auto">
+                <div className="">
                     <div className="flex flex-row align-items-center gap-10 mb-8">
                         <h2 className="text-4xl inline-block bg-lime-300 px-2 py-1 rounded-xl">
                             Services
@@ -105,6 +82,41 @@ export default function Home() {
                 </div>
             </section>
             <SwiperComponent />
+            <section className="mb-32">
+                <h2 className="text-4xl inline-block bg-lime-300 px-2 py-1 rounded-xl mb-8">
+                    Map
+                </h2>
+                <div className="py-5 px-5 bg-gray-100 rounded-[2rem] flex justify-between items-center">
+                    <div className="w-[55%] h-[534px] rounded-[2rem] shadow-[5px_5px_7px_rgba(0,0,0,0.3)] overflow-hidden">
+                        <MapWrapper />
+                    </div>
+                    <div className="flex flex-col gap-5 w-[38.1%]">
+                        <div className="flex items-center gap-2">
+                            <Image
+                                src="/marker.svg"
+                                width={74}
+                                height={74}
+                                alt="Marker Icon"
+                            ></Image>
+                            <h2 className="text-5xl inline-block bg-(--dark) px-4 py-3 rounded-xl text-white">
+                                Kharkiv
+                            </h2>
+                        </div>
+                        <div className="bg-(--dark) text-white rounded-xl px-4 py-5 text-3xl font-medium">
+                            Petra Grygorenka av., 10/14
+                        </div>
+                        <div className="bg-(--dark) text-white rounded-xl px-4 py-5 text-3xl font-medium">
+                            Mn-Fr: 9:00am - 6:00pm
+                        </div>
+                        <div className="bg-(--dark) text-white rounded-xl px-4 py-5 text-3xl font-medium">
+                            +38 (099) 114 07 70
+                        </div>
+                        <div className="bg-(--dark) text-white rounded-xl px-4 py-5 text-3xl font-medium">
+                            +38 (099) 114 07 70
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }

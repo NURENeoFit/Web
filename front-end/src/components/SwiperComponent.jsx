@@ -43,6 +43,7 @@ export default function SwiperComponent() {
                                         display: "block",
                                     }}
                                     alt={`Carousel Image ${num}`}
+                                    priority
                                 />
                             </div>
                         </SwiperSlide>
