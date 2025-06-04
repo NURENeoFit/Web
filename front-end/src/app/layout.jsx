@@ -1,7 +1,8 @@
 import { Space_Grotesk } from "next/font/google";
 import "./styles/globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/NavBar/Header";
+import Footer from "../components/NavBar/Footer";
+import { Providers } from "@/components/Providers";
 
 const spaceSans = Space_Grotesk({
     weight: ["400", "500", "600", "700"],
@@ -16,12 +17,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body
-                className={`${spaceSans.className} antialiased `}
-            >
-                <Header />
-                <div className="page container mx-auto max-w-7xl">{children}</div>
-                <Footer />
+            <body className={`${spaceSans.className} antialiased`}>
+                <Providers>
+                    <Header />
+                    <div className="page container mx-auto max-w-7xl">
+                        {children}
+                    </div>
+                    <Footer />
+                </Providers>
             </body>
         </html>
     );
