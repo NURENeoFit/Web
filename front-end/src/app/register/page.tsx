@@ -13,7 +13,7 @@ export default function RegisterPage() {
         e.preventDefault();
 
         const res = await fetch(
-            "http://localhost:3001/users?email=" + form.email
+            "https://db-zkzn.onrender.com/usersI?email=" + form.email
         );
         const existing = await res.json();
         if (existing.length > 0) {
@@ -21,7 +21,7 @@ export default function RegisterPage() {
             return;
         }
 
-        await fetch("http://localhost:3001/users", {
+        await fetch("https://db-zkzn.onrender.com/usersI", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(form),

@@ -27,14 +27,14 @@ export default function Pricing() {
         amount: "1",
         currency: "USD",
         description: "Test payment",
-        order_id: generateOrderId(), 
+        order_id: generateOrderId(),
         sandbox: "1", // тестовый режим
         // callback URL и другие параметры можно добавить
     };
 
     const { data, signature } = createSignature(paymentData);
     useEffect(() => {
-        fetch("http://localhost:3001/memberships")
+        fetch("https://db-zkzn.onrender.com/membershipsI")
             .then((res) => res.json())
             .then((data) => setMemberships(data))
             .catch((error) =>

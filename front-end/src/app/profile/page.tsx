@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 
 async function getUserData(email: string) {
-    const res = await fetch(`http://localhost:3001/users?email=${email}`, {
+    const res = await fetch(`https://db-zkzn.onrender.com/usersI?email=${email}`, {
         cache: "no-store",
     });
     const users = await res.json();

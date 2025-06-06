@@ -8,11 +8,6 @@ export const authConfig: AuthOptions = {
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID || "",
             clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
-            authorization: {
-                params: {
-                    scope: "openid email profile https://www.googleapis.com/auth/calendar.events",
-                },
-            },
         }),
         CredentialsProvider({
             name: "credentials",
@@ -22,7 +17,7 @@ export const authConfig: AuthOptions = {
             },
             async authorize(credentials) {
                 const res = await fetch(
-                    `http://localhost:3001/users?email=${credentials?.email}`
+                    `https://db-zkzn.onrender.com/usersI?email=${credentials?.email}`
                 );
                 const users = await res.json();
 
@@ -43,12 +38,12 @@ export const authConfig: AuthOptions = {
         async signIn({ user, account }) {
             if (account?.provider === "google") {
                 const res = await fetch(
-                    `http://localhost:3001/users?email=${user.email}`
+                    `https://db-zkzn.onrender.com/usersI?email=${user.email}`
                 );
                 const existing = await res.json();
 
                 if (existing.length === 0) {
-                    await fetch("http://localhost:3001/users", {
+                    await fetch("https://db-zkzn.onrender.com/usersI", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({

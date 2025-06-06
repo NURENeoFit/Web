@@ -4,6 +4,8 @@
     --foreground: #000000;
     --dark: #191a23;
     --hover-dark: #2a2b36f6;
+    --fc-event-bg-color: #bef264; /* lime-200 */
+    --fc-event-border-color: #a3e635;
 }
 
 @media (prefers-color-scheme: dark) {
