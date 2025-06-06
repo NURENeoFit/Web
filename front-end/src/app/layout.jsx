@@ -2,7 +2,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./styles/globals.css";
 import Header from "../components/NavBar/Header";
 import Footer from "../components/NavBar/Footer";
-import { Providers } from "@/components/Providers";
+import { Providers } from "../components/Providers";
 
 const spaceSans = Space_Grotesk({
     weight: ["400", "500", "600", "700"],

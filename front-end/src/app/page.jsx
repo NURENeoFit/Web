@@ -1,6 +1,6 @@
-import SwiperComponent from "@/components/SwiperComponent";
-import ServiceCard from "@/components/ServiceComponent";
-import MapWrapper from "@/components/Map/MapWrapper";
+import SwiperComponent from "../components/SwiperComponent";
+import ServiceCard from "../components/ServiceComponent";
+import MapWrapper from "../components/Map/MapWrapper";
 import Image from "next/image";
 export default function Home() {
     return (

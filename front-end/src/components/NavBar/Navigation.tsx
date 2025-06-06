@@ -45,7 +45,7 @@ export default function Navigation({ navLinks }: Props) {
                 </Link>
             ) : (
                 <Link
-                    href="/api/auth/signin"
+                    href="/register"
                     className="border border-lime-400 text-black px-4 py-2 rounded-md hover:bg-lime-100 transition"
                 >
                     Sign In
