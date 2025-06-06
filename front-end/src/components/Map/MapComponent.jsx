@@ -5,14 +5,11 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useEffect } from "react";
 
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
-
 const fixLeafletIcons = () => {
     const DefaultIcon = L.Icon.Default;
     DefaultIcon.mergeOptions({
-        iconUrl: icon,
-        shadowUrl: iconShadow,
+        iconUrl: "/marker-icon.png",
+        shadowUrl: "/marker-shadow.png",
     });
 };
 
@@ -27,9 +24,7 @@ export default function MapComponent() {
             zoom={16}
             style={{ height: "100%", width: "100%" }}
         >
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[49.9545, 36.3145]}>
                 <Popup>Спортивний зал</Popup>
             </Marker>

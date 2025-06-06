@@ -52,13 +52,7 @@ export default async function Profile() {
                         Book a training
                     </Link>
                     <Link
-                        href="#"
-                        className="block w-full text-left py-3 px-4 rounded-md bg-lime-200 hover:bg-lime-300 transition-colors"
-                    >
-                        Own Schedule
-                    </Link>
-                    <Link
-                        href="/Logo.svg" download={true}
+                        href="/app-release.apk" download={true}
                         className="block w-full text-left py-3 px-4 rounded-md bg-gray-200 hover:bg-gray-300 transition-colors"
                     >
                         Download Apk
