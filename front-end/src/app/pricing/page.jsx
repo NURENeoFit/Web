@@ -5,6 +5,10 @@ import crypto from "crypto";
 const publicKey = "sandbox_i91911055214";
 const privateKey = "sandbox_3OLgdJAZ7FmH9xWSZah4wE09iVAEzS6tU5NlpoPO";
 
+const generateOrderId = () => {
+    return "order_" + Date.now() + "_" + Math.floor(Math.random() * 100000);
+};
+
 function createSignature(data) {
     const json = JSON.stringify(data);
     const base64 = Buffer.from(json).toString("base64");
@@ -23,7 +27,7 @@ export default function Pricing() {
         amount: "1",
         currency: "USD",
         description: "Test payment",
-        order_id: "order121",
+        order_id: generateOrderId(), 
         sandbox: "1", // тестовый режим
         // callback URL и другие параметры можно добавить
     };

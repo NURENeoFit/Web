@@ -56,5 +56,39 @@
             "count_of_training": 15,
             "type": "group"
         }
+    ], 
+    "trainings" : [
+        {
+            "id": 1,
+            "capacity": 20,
+            "date_of_day": "2025-06-06",
+            "start_time": "09:00",
+            "end_time": "10:30",
+            "user_id": ["58d4", "aa09"]
+        },
+        {
+            "id": 2,
+            "capacity": 15,
+            "date_of_day": "2025-06-06",
+            "start_time": "14:00",
+            "end_time": "15:30",
+            "user_id": ["7812", "f9d2", "3d4a"]
+        },
+        {
+            "id": 3,
+            "capacity": 25,
+            "date_of_day": "2025-06-05",
+            "start_time": "10:00",
+            "end_time": "11:30",
+            "user_id": ["58d4", "3d4a"]
+        },
+        {
+            "id": 4,
+            "capacity": 18,
+            "date_of_day": "2025-06-06",
+            "start_time": "16:00",
+            "end_time": "17:30",
+            "user_id": ["aa09", "7812", "f9d2"]
+        }
     ]
 }

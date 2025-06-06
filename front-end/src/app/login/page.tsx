@@ -29,41 +29,57 @@ export default function LoginPage() {
                 className="space-y-4 max-w-md w-full mx-auto"
             >
                 <div>
-                    <label className="block text-sm font-medium text-gray-700">Email</label>
+                    <label className="block text-sm font-medium text-gray-700">
+                        Email
+                    </label>
                     <input
                         type="email"
                         placeholder="blablabla@gmail.com"
                         value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        onChange={(e) =>
+                            setForm({ ...form, email: e.target.value })
+                        }
                         className="w-full border p-2 rounded-md"
                         required
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-medium text-gray-700">Password</label>
+                    <label className="block text-sm font-medium text-gray-700">
+                        Password
+                    </label>
                     <input
                         type="password"
                         placeholder="Enter your password"
                         value={form.password}
-                        onChange={(e) => setForm({ ...form, password: e.target.value })}
+                        onChange={(e) =>
+                            setForm({ ...form, password: e.target.value })
+                        }
                         className="w-full border p-2 rounded-md"
                         required
                     />
                     {/* Password eye icon can be added here */}
                 </div>
-                <button type="submit" className="w-full bg-lime-400 text-black px-4 py-2 rounded-md font-bold">
+                <button
+                    type="submit"
+                    className="w-full bg-lime-400 text-black px-4 py-2 rounded-md font-bold"
+                >
                     Log In
                 </button>
                 <button
                     type="button"
-                    onClick={() => signIn("google", { callbackUrl: "/profile" })}
+                    onClick={() =>
+                        signIn("google", { callbackUrl: "/profile" })
+                    }
                     className="w-full bg-gray-800 text-white px-4 py-2 rounded-md font-bold flex items-center justify-center space-x-2"
                 >
                     {/* Google icon can be added here */}
                     <span>Continue with Google</span>
                 </button>
                 <div className="text-center text-sm mt-4">
-                    Don't Have An Account? <Link href="/register" className="underline">Sign Up</Link>
+                    Dont Have An Account?{" "}
+                    <Link href="/register" className="underline">
+                        Sign Up
+                    </Link>
                 </div>
             </form>
         </div>
